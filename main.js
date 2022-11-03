@@ -1,20 +1,16 @@
 import { tweetsData } from "./data.js";
 
 const tweetInput = document.getElementById('tweet-input')
-const tweetBtn = document.getElementById('tweet-btn')
-
-
-tweetBtn.addEventListener('click', ()=>{
-  console.log(tweetInput.value)
-})
 
 document.addEventListener('click', function(e){
   if (e.target.dataset.like){
       handleLikeClick(e.target.dataset.like)
   } else if (e.target.dataset.retweet) {
     handleRetweetClick(e.target.dataset.retweet)
-  } else if(e.target.dataset.reply){
+  } else if (e.target.dataset.reply){
     handleReplyClick(e.target.dataset.reply)
+  } else if (e.target.id === 'tweet-btn') {
+    handleTweetBtnClick()
   }
 })
 
@@ -49,6 +45,9 @@ function handleReplyClick(replyId){
   document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
+function handleTweetBtnClick(){
+  console.log(tweetInput.value)
+}
 
 function getFeedHtml(){
   let feedHtml = ``
@@ -122,8 +121,6 @@ function getFeedHtml(){
       })
       return feedHtml
   }
-// console.log(getFeedHtml())
-
 
 function render() {
   document.getElementById('feed').innerHTML = getFeedHtml()
