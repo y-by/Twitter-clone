@@ -102,7 +102,7 @@ function getFeedHtml(){
         <div class="tweet">
           <div class="tweet-inner">
             <img src="${tweet.profilePic}" class="profile-pic">
-            <div> 
+            <div class="tweet-text-send"> 
                 <p class="handle">${tweet.handle}</p>
                 <p class="tweet-text">${tweet.tweetText}</p>
                 <div class="tweet-details">

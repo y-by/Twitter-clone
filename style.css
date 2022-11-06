@@ -32,8 +32,17 @@ color: limegreen;
 /* layout */
 
 main, header{
-  width: 290px;
+  width: calc(100vw - 2em);
   margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  main{
+    width: 33vw;
+  } 
+  header {
+    width: 33vw;
+  }
 }
 
 header{
@@ -84,6 +93,12 @@ button{
   display: flex;
   align-items: flex-start;
   gap: 10px;
+}
+
+.tweet-text-send {
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: calc(100% - 4em);
 }
 
 .tweet-details{
