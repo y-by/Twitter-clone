@@ -88,9 +88,8 @@ button{
 
 .tweet-details{
   display: flex;
-  font-size: 13px;
+  font-size: 1em;
   justify-content: space-between;
-  width: 160px;
 }
 
 .tweet-detail{
@@ -106,15 +105,14 @@ button{
 }
 
 .handle{
-  font-size: 12px;
+  font-size: .75em;
   font-weight: 500;
   color: #555;
   margin-top: 0;
 }
 
 .tweet-text{
-  width: 207px;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 20px;
 
 }
